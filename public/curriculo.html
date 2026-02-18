@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Marcos Levy</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* Estilos de Estrutura */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #121212; 
+      color: #E0E0E0; 
+      min-height: 100vh; 
+      overflow-y: auto; 
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #121212; 
+      z-index: 1; 
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto; 
+      padding: 30px;
+      background: #1A1A1A; 
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); 
+      width: 90%; 
+      position: relative; 
+      z-index: 2; 
+    }
+
+    /* NOVO: Estilo do Botão Voltar */
+    .btn-voltar {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #AEEFFF; /* Azul do Portfólio */
+        color: #121212; /* Texto escuro para contraste */
+        padding: 10px 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+        margin-bottom: 25px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-voltar:hover {
+        background-color: #8FD9EE;
+        transform: translateX(-5px);
+        box-shadow: 0 0 15px rgba(174, 239, 255, 0.3);
+    }
+
+    /* Estilos do Conteúdo */
+    h1 {
+      text-align: center;
+      color: #AEEFFF; 
+      margin-bottom: 5px;
+      font-size: 2.2em;
+    }
+    
+    h2 {
+      color: #FFFFFF;
+      border-bottom: 2px solid #333333;
+      padding-bottom: 5px;
+      margin-top: 25px;
+    }
+    
+    .contact-info {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #B0B0B0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 25px;
+        font-size: 0.95em;
+    }
+
+    .contact-item {
+        white-space: nowrap;
+    }
+
+    .contact-info a {
+        color: #AEEFFF;
+        text-decoration: none;
+    }
+
+    .contact-info i {
+        color: #AEEFFF;
+        margin-right: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: none;
+    }
+
+    .summary {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #242424; 
+      border-left: 4px solid #AEEFFF;
+      font-style: italic;
+    }
+
+    .job-title {
+      font-weight: bold;
+      color: #AEEFFF; 
+    }
+
+    .job-dates {
+      font-style: italic;
+      color: #999;
+    }
+
+    /* Estilos para Habilidades */
+    .skill-category {
+        margin-bottom: 20px;
+    }
+
+    .skill-title {
+        color: #AEEFFF;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 1.1em;
+    }
+
+    .skill-logo-group {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 15px; 
+    }
+
+    .logo-item {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        width: 60px; 
+        color: #B0B0B0;
+        font-size: 0.8em;
+    }
+    
+    .icon-logo {
+        font-size: 35px; 
+        margin-bottom: 4px;
+    }
+
+    /* CONFIGURAÇÃO PARA IMPRESSÃO (PDF) */
+    @media print {
+        .btn-voltar, #particles-js { display: none !important; }
+        body { background-color: white !important; color: black !important; }
+        .container { 
+            background: white !important; 
+            box-shadow: none !important; 
+            margin: 0 !important; 
+            width: 100% !important; 
+            max-width: 100% !important;
+            color: black !important;
+        }
+        h1, h2, .skill-title, .job-title, .contact-info i { color: #005f73 !important; }
+        .summary { background-color: #f0f0f0 !important; border-left: 4px solid #005f73 !important; color: black !important; }
+        .contact-info, .logo-item { color: black !important; }
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="particles-js"></div>
+  
+  <div class="container">
+    <a href="/" class="btn-voltar">
+        <i class="fas fa-arrow-left"></i> Voltar ao Portfólio
+    </a>
+
+    <h1>Marcos Levy</h1>
+    
+    <div class="contact-info">
+      <span class="contact-item">
+        <i class="fas fa-envelope"></i> 
+        <a href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a>
+      </span>
+      <span class="contact-item">
+        <i class="fas fa-phone"></i> (XX) XXXX-XXXX
+      </span>
+      <span class="contact-item">
+        <i class="fas fa-globe"></i> [LinkedIn]
+      </span>
+      <span class="contact-item">
+        <i class="fas fa-code-branch"></i> [GitHub]
+      </span>
+      <span class="contact-item">
+        <i class="fas fa-birthday-cake"></i> 18 Anos
+      </span>
+      <span class="contact-item">
+        <i class="fas fa-language"></i> Português (Nativo), Inglês (Básico)
+      </span>
+    </div>
+
+    <hr style="border-color: #333333;">
+
+    <h2>Resumo Profissional</h2>
+    <p class="summary">
+      Desenvolvedor de Software Júnior Híbrido focado em Engenharia de Software e Segurança da Informação, com 
+      2 anos de experiência em projetos utilizando Next.js, React e Tailwind CSS. Expertise na criação de soluções 
+      robustas e seguras.
+      <br><br>
+      Diferencial: Especialista em unir a agilidade do Front-end moderno com práticas de hardening no Back-end.
+    </p>
+
+    <hr style="border-color: #333333;">
+
+    <h2>Experiência e Contribuições</h2>
+    <div>
+      <h3 class="job-title">Projetos de Desenvolvimento Web (Freelancer)</h3>
+      <p class="job-dates">Janeiro, 2023 – Presente</p>
+      <ul>
+        <li>Desenvolvi mais de 90 websites responsivos com Next.js e Tailwind CSS.</li>
+        <li>Otimização de performance (Core Web Vitals) reduzindo o carregamento em 30%.</li>
+      </ul>
+    </div>
+    
+    <div>
+      <h3 class="job-title">Portfólio "SecDev" (Projeto Pessoal)</h3>
+      <p class="job-dates">Julho, 2023 – Presente</p>
+      <ul>
+        <li>Arquitetura Híbrida Full-Stack com Next.js e Node.js.</li>
+        <li>Implementação de segurança baseada nos padrões OWASP.</li>
+      </ul>
+    </div>
+
+    <hr style="border-color: #333333;">
+
+    <h2>Habilidades Técnicas</h2>
+    <div class="skill-category">
+        <span class="skill-title"><i class="fas fa-code"></i> Linguagens</span>
+        <div class="skill-logo-group">
+            <div class="logo-item"><iconify-icon icon="devicon:html5" class="icon-logo"></iconify-icon>HTML5</div>
+            <div class="logo-item"><iconify-icon icon="devicon:css3" class="icon-logo"></iconify-icon>CSS3</div>
+            <div class="logo-item"><iconify-icon icon="devicon:javascript" class="icon-logo"></iconify-icon>JavaScript</div>
+            <div class="logo-item"><iconify-icon icon="devicon:typescript" class="icon-logo"></iconify-icon>TypeScript</div>
+            <div class="logo-item"><iconify-icon icon="devicon:python" class="icon-logo"></iconify-icon>Python</div>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <span class="skill-title"><i class="fas fa-layer-group"></i> Frameworks & Bibliotecas</span>
+        <div class="skill-logo-group">
+            <div class="logo-item"><iconify-icon icon="devicon:react" class="icon-logo"></iconify-icon>React</div>
+            <div class="logo-item"><iconify-icon icon="devicon:nextjs" class="icon-logo" style="color:#FFF"></iconify-icon>Next.js</div>
+            <div class="logo-item"><iconify-icon icon="devicon:tailwindcss" class="icon-logo"></iconify-icon>Tailwind</div>
+            <div class="logo-item"><iconify-icon icon="devicon:nodejs" class="icon-logo"></iconify-icon>Node.js</div>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <span class="skill-title"><i class="fas fa-shield-alt"></i> Segurança & DevOps</span>
+        <div class="skill-logo-group">
+            <div class="logo-item"><iconify-icon icon="devicon:git" class="icon-logo"></iconify-icon>Git</div>
+            <div class="logo-item"><iconify-icon icon="devicon:github" class="icon-logo" style="color:#FFF"></iconify-icon>GitHub</div>
+            <div class="logo-item"><iconify-icon icon="devicon:vercel" class="icon-logo" style="color:#FFF"></iconify-icon>Vercel</div>
+        </div>
+    </div>
+
+  </div>
+  
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#AEEFFF" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#AEEFFF", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 4 }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
